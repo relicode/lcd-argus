@@ -7,7 +7,7 @@ def configure_lcd():
     lcd = CharLCD(i2c_expander='PCF8574', address=0x27, port=1, cols=20, rows=4, dotsize=8)
     return lcd
 
-def format_for_screen(string_or_list: str | list[str]) -> list[str]:
+def format_for_screen(string_or_list) -> list[str]:
     lines = string_or_list.splitlines() if isinstance(string_or_list, str) else string_or_list
     trimmed_lines: list[str] = []
     for line in lines[:4]:

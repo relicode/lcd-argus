@@ -21,4 +21,4 @@ if (!response.ok) throw new Error(response.statusText)
 
 const body = await response.json()
 
-logLines(body.message)
+logLines(body.lines)
